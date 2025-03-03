@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CityList from "./CityList";
 import AddDialog from "./AddDialog";
-import "./App.css"; // Import global styles
+import  "../assets/App.css"; 
 
 function StateList({ country, countryIndex, setCountries }) {
   const [selectedIndex, setSelectedIndex] = useState(null);

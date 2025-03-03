@@ -16,8 +16,40 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 90%;
+  max-width: 800px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .app-container {
+    width: 95%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    height: auto;
+    padding: 20px;
+  }
+  .app-container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 /* Title */
@@ -34,6 +66,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+  margin-left: 15px;
 }
 
 .add-btn {
@@ -76,6 +109,7 @@ body {
 .list-container {
   list-style: none;
   padding: 0;
+  width: 100%;
 }
 
 .list-item {
@@ -106,7 +140,8 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  width: 300px;
+  width: 90%;
+  max-width: 300px;
   text-align: center;
 }
 
@@ -127,6 +162,7 @@ body {
 /* Containers */
 .country-container, .state-container, .city-container {
   margin-top: 15px;
+  width: 100%;
 }
 
 /* Cards */
@@ -136,6 +172,11 @@ body {
   margin: 10px 0;
   border-radius: 6px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
 }
 
 .country-card {
@@ -152,4 +193,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  .dialog {
+    width: 95%;
+  }
+  .dialog-actions {
+    flex-direction: column;
+  }
+  .add-btn, .edit-btn, .delete-btn, .cancel-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .country-list {
+    flex-direction: column;
+  }
 }

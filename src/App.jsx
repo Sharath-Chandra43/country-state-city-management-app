@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import CountryList from "./components/CountryList";
 import AddDialog from "./components/AddDialog";
-import "./App.css"; // Import the CSS file
+import  "../src/assets/App.css"; 
 
-export default function App() {
+ function App() {
   const [countries, setCountries] = useState([]);
   const [isAdding, setIsAdding] = useState(false);
+
 
   const addCountry = (name) => {
     if (name) setCountries([...countries, { name, states: [] }]);
@@ -16,7 +17,7 @@ export default function App() {
     <div className="app-container">
       <h1 className="title">Country, State, and City Management</h1>
       <button className="add-btn" onClick={() => setIsAdding(true)}>Add Country</button>
-      <CountryList countries={countries} setCountries={setCountries} />
+      <CountryList countries={countries} setCountries={setCountries} className="country-list"/>
       <AddDialog 
         isOpen={isAdding} 
         onClose={() => setIsAdding(false)} 
@@ -27,3 +28,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App

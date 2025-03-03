@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./App.css"; // Import global styles
+import  "../assets/App.css"; 
 
-export default function AddDialog({ isOpen, onClose, onSubmit, title, placeholder }) {
+ function AddDialog({ isOpen, onClose, onSubmit, title, placeholder }) {
   const [input, setInput] = useState("");
 
   if (!isOpen) return null;
@@ -25,3 +25,5 @@ export default function AddDialog({ isOpen, onClose, onSubmit, title, placeholde
     </div>
   );
 }
+
+export default AddDialog

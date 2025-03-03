@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css"; // Import global styles
+import  "../assets/App.css"; 
 
 function CityList({ cities, stateIndex, updateCountryStates }) {
   // Delete city
